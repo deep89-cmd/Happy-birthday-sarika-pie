@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sarika Pie 💜</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg, #ffe4f1, #eee5ff, #fff5e8);
+    color: #603b70;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 45px 18px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card {
+    width: 92%;
+    max-width: 700px;
+    padding: 35px 20px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 30px;
+    box-shadow: 0 0 35px #d8a8ee;
+    border: 2px solid white;
+}
+
+h1 {
+    font-size: clamp(38px, 9vw, 65px);
+    color: #d84f9c;
+    margin: 20px 0;
+    animation: glow 2s infinite alternate;
+}
+
+h2 {
+    color: #b34d9d;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+p {
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+button {
+    border: none;
+    padding: 14px 25px;
+    margin: 20px 0;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ff8fbd, #ad91ff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #d7a4df;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #ffb5dc; }
+    to { text-shadow: 0 0 25px #e77dc2; }
+}
+
+.float {
+    position: fixed;
+    top: -40px;
+    z-index: 5;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.1;
+    }
+}
+
+.box {
+    max-width: 700px;
+    margin: auto;
+    background: rgba(255,255,255,0.82);
+    border-radius: 25px;
+    padding: 28px 20px;
+    box-shadow: 0 5px 25px #d9b9e8;
+}
+
+.message {
+    background: #fff0f8;
+    border-radius: 18px;
+    padding: 20px;
+    margin: 18px 0;
+    line-height: 1.9;
+    border-left: 5px solid #e9a4d0;
+    text-align: left;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.photo-frame {
+    background: #f8edff;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #d6b7e8;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.photo-frame p {
+    margin-top: 10px;
+}
+
+.sticker {
+    font-size: 35px;
+    margin: 8px;
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    50% { transform: translateY(-8px); }
+}
+
+#surprise {
+    display: none;
+    margin-top: 20px;
+}
+
+footer {
+    padding: 35px 15px;
+    font-size: 17px;
+}
+
+@media(max-width: 480px) {
+    .card { padding: 30px 16px; }
+    .photo-frame img { height: 220px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING HEARTS AND CUTE DECORATIONS -->
+
+<script>
+function createFloaties() {
+    const symbols = ["💜","💗","💕","✨","🐼","🌸","🎀","💖"];
+
+    setInterval(() => {
+        const item = document.createElement("div");
+        item.className = "float";
+        item.innerHTML = symbols[Math.floor(Math.random()*symbols.length)];
+        item.style.left = Math.random()*100 + "vw";
+        item.style.fontSize = (18 + Math.random()*22) + "px";
+        item.style.animationDuration = (5 + Math.random()*6) + "s";
+
+        document.body.appendChild(item);
+
+        setTimeout(() => item.remove(), 11000);
+    }, 350);
+}
+
+createFloaties();
+</script>
+
+<!-- FIRST PAGE -->
+
+<section class="hero">
+
+<div class="card">
+
+<div class="sticker">🐼 💜 🐱</div>
+
+<p>✨ A little surprise made especially for you ✨</p>
+
+<h1>Happy Birthday<br>Sarika! 🎂</h1>
+
+<p>
+Meri Sarika Pie 💗<br>
+Meri Cutie Pie 🥹<br>
+Meri sabse sweet Rasmalai 🍥
+</p>
+
+<div class="sticker">🎀 🧸 🌸</div>
+
+<p>
+Aaj ka din special hai kyunki aaj ek aisi ladki ka birthday hai
+jiski smile mere busy din ko bhi beautiful bana deti hai. 💕
+</p>
+
+<button onclick="openSurprise()">
+Open Your Surprise 💌
+</button>
+
+<div id="surprise">
+<h2>For My Rasmalai 💗</h2>
+
+<p>
+Surpriseee! 🥹💜<br>
+Tumhare liye kuch likhne ka mann hua
+toh socha is baar kuch alag karun.
+I hope tumhe pasand aaye meri Cutie Pie. 🐼
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- PHOTO GALLERY -->
+
+<section>
+<div class="box">
+
+<h2>My Beautiful Sarika 📸💕</h2>
+
+<p>
+Tumhari cute si smile ke liye ek chhoti si gallery. 💗
+</p>
+
+<br>
+
+<div class="photo-grid">
+
+<div class="photo-frame">
+<img src="sarika1.jpg" alt="Sarika's photo">
+<p>Meri Cute Si Sarika 🌸</p>
+</div>
+
+<div class="photo-frame">
+<img src="sarika2.jpg" alt="Sarika's photo">
+<p>My Favourite Smile 💗</p>
+</div>
+
+<div class="photo-frame">
+<img src="suga.jpg" alt="SUGA BTS">
+<p>For My BTS Loving Girl 💜</p>
+</div>
+
+</div>
+
+<p style="margin-top:20px;font-size:14px">
+Apni photos ko sarika1.jpg, sarika2.jpg aur suga.jpg
+naam se isi GitHub repository mein upload karna.
+</p>
+
+</div>
+</section>
+
+<!-- HEARTFELT MESSAGE -->
+
+<section>
+<div class="box">
+
+<h2>Meri Sarika Pie Ke Liye 💌</h2>
+
+<div class="message">
+Meri Cutie Pie, pata hai tumse baat karke mujhe kitna achha lagta hai?
+
+Pure din ki duty aur thakan ke baad jab tumse baat hoti hai na,
+toh mood achha ho jata hai. Kabhi tumhari baatein,
+kabhi tumhara mujhe chidhana aur kabhi tumhari cute si smile. 🥹💗
+
+Pata nahi doosron ko tumhari smile kaisi lagti hai,
+par mere liye woh mere stressful din ka sabse beautiful part ban sakti hai.
+</div>
+
+<div class="message">
+Meri Rasmalai 🍥💕
+
+Tum sach mein bahut cute ho.
+Kabhi mann karta hai tumse ghanton baatein karta rahun,
+tumhari har chhoti si baat sunun aur tumhari smile dekhta rahun.
+
+Main tumhe sirf dekhkar pasand karne tak nahi rehna chahta.
+Main tumhe achhe se jaan-na chahta hoon,
+tumhare dreams, tumhari pasand aur tumhari life ki har woh baat
+samajhna chahta hoon jo tum mere saath share karna chaho.
+</div>
+
+<div class="message">
+Aur haan meri Sarika Pie,
+main chahta hoon ki tum mere saath hamesha comfortable aur respected feel karo.
+
+Mere liye tumhari feelings aur tumhari happiness important hain.
+Main nahi chahta ki tumhe kabhi lage ki main tumse sirf ek hi cheez chahta hoon.
+Mujhe tumhari company pasand hai,
+tumse baatein karna pasand hai aur tumhe dheere-dheere samajhna pasand hai. 💗
+</div>
+
+</div>
+</section>
+
+<!-- BIRTHDAY SHAYARI -->
+
+<section>
+<div class="box">
+
+<h2>For You, Meri Rasmalai 🌙</h2>
+
+<div class="message">
+Teri hasi se din mera roshan ho jaaye,<br>
+Teri khushi se har pal gulshan ho jaaye.<br>
+Janamdin par bas itni si dua hai meri,<br>
+Tere har sapne ko khoobsurat manzil mil jaaye. 💖
+</div>
+
+<div class="message">
+Rasmalai si sweet, panda si cute,<br>
+Teri smile ka nahi koi substitute.<br>
+Khushiyon se bhara rahe tera har day,<br>
+Happy Birthday meri Sarika Pie! 🎂💜
+</div>
+
+<div class="message">
+Teri aankhon mein khushiyon ka jahaan rahe,<br>
+Tere hothon par hamesha muskaan rahe.<br>
+Har birthday tera pehle se khaas ho,<br>
+Aur tere har sapne ke paas ek nayi udaan ho. 🌸
+</div>
+
+<div class="message">
+Door hoon abhi par milne ki aas hai,<br>
+Teri khushi mere liye kuch khaas hai.<br>
+Jab milenge toh yaadon ka safar banayenge,<br>
+Saath chal kar khoobsurat pal bitayenge. 💗
+</div>
+
+</div>
+</section>
+
+<!-- BTS AND PANDA SECTION -->
+
+<section>
+<div class="box">
+
+<h2>BTS Lover Alert! 💜🎧</h2>
+
+<div class="sticker">💜 🐼 💜</div>
+
+<p>
+Meri BTS loving Cutie Pie! 🥹💜
+<br><br>
+Aaj tumhara day hai, toh aaj tum bas smile karna,
+apni favourite BTS songs sunna aur apne liye time nikalna.
+
+Aur agar SUGA ki photo dekhkar tum smile kar rahi ho,
+toh samajh lena ki tumhara birthday officially successful hai. 😂💜
+</p>
+
+<div class="sticker">🐼 🎂 🐼</div>
+
+<p>
+Panda jaisi cuteness aur Rasmalai jaisi sweetness
+sirf meri Sarika mein ho sakti hai. 💕
+</p>
+
+</div>
+</section>
+
+<!-- FUTURE MEETING -->
+
+<section>
+<div class="box">
+
+<h2>One Day, When We Meet 🌷</h2>
+
+<div class="message">
+Sarika, tum kabhi kehti ho ki main jaldi tumse milne aaun.
+Sach kahun toh main bhi us din ka wait karta hoon.
+
+Jab main aaunga, toh tum mujhe apni favourite jagah ghumane le jaana.
+Hum saath mein walk karenge, baatein karenge,
+kuch achha sa khayenge aur apni chhoti-chhoti memories banayenge.
+
+Main imagine karta hoon ki hum dono saath chal rahe hon,
+aur tumhare haath mein mera haath ho.
+Woh simple sa moment bhi mere liye bahut special hoga. 💗
+</div>
+
+<div class="message">
+Abhi meri army duty aur exam preparation bhi important hain.
+Mujhe apni responsibilities achhe se poori karni hain
+aur apne future ke liye mehnat karni hai.
+
+Iska matlab yeh bilkul nahi ki tum mere liye important nahi ho.
+Main chahta hoon ki main apne goals par bhi focus karun
+aur tumhe bhi waqt ke saath achhe se samajhun.
+
+Main bade-bade waade karne ke bajaye
+apni care, honesty aur actions se tumhe dikhana chahta hoon
+ki tum mere liye special ho. 🤍
+</div>
+
+</div>
+</section>
+
+<!-- FINAL BIRTHDAY WISH -->
+
+<section>
+<div class="box">
+
+<h2>One Last Thing, Birthday Girl 💗</h2>
+
+<p>
+Meri Sarika Pie, meri Cutie Pie, meri Rasmalai 🍥💕
+</p>
+
+<br>
+
+<p>
+May your life be full of happiness, love, success
+and beautiful surprises.
+
+Tumhare saare dreams poore hon,
+tum hamesha healthy aur happy raho
+aur tumhari smile kabhi kam na ho. 🥹💗
+</p>
+
+<br>
+
+<p>
+Thank you meri life mein aane aur itni saari cute memories
+banane ke liye.
+</p>
+
+<h1 style="font-size:38px">
+Happy Birthday! 🎂💜
+</h1>
+
+<div class="sticker">🐼 💗 🎀 💜 🐼</div>
+
+<button onclick="birthdayMagic()">
+Tap For Birthday Magic ✨
+</button>
+
+<p id="magicMessage"></p>
+
+</div>
+</section>
+
+<footer>
+Made with lots of care for<br>
+<b>My Sarika Pie 💗</b><br><br>
+🐼 Panda hugs · 💜 BTS love · 🍥 Rasmalai sweetness
+</footer>
+
+<script>
+function openSurprise() {
+    document.getElementById("surprise").style.display = "block";
+}
+
+function birthdayMagic() {
+    document.getElementById("magicMessage").innerHTML =
+    "🎂💗 Happy Birthday meri Sarika Pie! 💗🎂<br>" +
+    "Aaj ka din sirf tumhari smile ke naam! 🐼💜✨";
+
+    for (let i = 0; i < 35; i++) {
+        const heart = document.createElement("div");
+        heart.className = "float";
+        heart.innerHTML = ["💗","💜","✨","🎀","🌸"][
+            Math.floor(Math.random() * 5)
+        ];
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 7500);
+    }
+}
+</script>
+
+</body>
+  </html>
